@@ -1,9 +1,7 @@
 <h1>This page is private</h1>
 <br/>
 
-<% if user_signed_in? %>
-  <p>Logged in as: <%= @user.email %></p>
-  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-<% end %>
+<p>Logged in as: <%= @user.email %></p>
+<%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
 <br/>
 <%= link_to("Public Page", root_path, :method => :get) %>
