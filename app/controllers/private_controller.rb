@@ -3,6 +3,7 @@ class PrivateController < ApplicationController
 
   def content
     @user = current_user
+	@content = Places.new
   end
 
 end

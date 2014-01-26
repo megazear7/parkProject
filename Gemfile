@@ -46,3 +46,6 @@ end
 
 # Use Devise as a login system
 gem 'devise'
+
+# Use Active Resource to control Api interaction
+gem "activeresource", "~> 4.0.0"
