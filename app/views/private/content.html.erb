@@ -1,6 +1,14 @@
 <h1>This page is private</h1>
 <br/>
 
+<% @test["results"].each do |x| %>
+  <div class="entry_container">
+	<img src="<%= x["icon"] %>"></img>
+	<h2 class="entry_title"><%= x["name"]  %></h2>
+  </div>
+  <br/>
+<% end %>
+
 <p>Logged in as: <%= @user.email %></p>
 <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
 <br/>

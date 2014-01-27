@@ -1,3 +1,30 @@
 // Place all the styles related to the private controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.entry_title {
+	position:absolute;
+	left:100px;
+	top:15px;
+}
+
+.entry_container:hover {
+	background: rgb(236, 197, 150);
+	border-color:#F3AF5E;
+}
+
+.entry_container {
+	-moz-transition: all .25s ease-in;
+	-webkit-transition: all .25s ease-in;
+	-o-transition: all .25s ease-in;
+	transition: all .25s ease-in;
+	position:relative;
+	padding: 15px;
+	background-color: rgb(250, 224, 193);
+	border-radius: 10px;
+	width: 50%;
+	margin: auto;
+	border-width:5px;
+	border-style:solid;
+	border-color:rgb(250, 224, 193);
+}
