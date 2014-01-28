@@ -14,8 +14,8 @@
 <% end %>
 
 <div class="center">
-	<br/>
-	<%= link_to("Logged in as: #{@user.email}", edit_user_registration_path, :method => :get) %> |
-	<%= link_to("Welcome Page", root_path, :method => :get) %> | 
-	<%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+  <br/>
+  <%= link_to("Logged in as: #{@user.email}", edit_user_registration_path, :method => :get) %> |
+  <%= link_to("Welcome Page", root_path, :method => :get) %> | 
+  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
 </div>

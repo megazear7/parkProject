@@ -24,7 +24,6 @@ class PrivateController < ApplicationController
 	  @title.gsub!(/<(.*?)>/, '')
 	end
 
-
     @paragraph = @content[/<p>.*?<\/p>/]
 	if @paragraph
 	  @paragraph.gsub!(/<(.*?)>/, '')
