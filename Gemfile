@@ -43,3 +43,15 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Devise as a login system
+gem 'devise'
+
+# Use httparty to interact with google places api
+gem "httparty"
+
+# Use json to access google places data
+gem "json"
+
+# Use will paginate to paginate data
+gem 'will_paginate', '~> 3.0.5'

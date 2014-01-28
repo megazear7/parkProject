@@ -1,4 +1,10 @@
 ParkProject::Application.routes.draw do
+
+  devise_for :users
+  root :to => "home#index" 
+  get 'private' => "private#content"
+  get 'private/:id' => "private#item"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

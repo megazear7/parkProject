@@ -1,0 +1,18 @@
+<h1 class="center">Colombus Listings</h1>
+<br/>
+
+<% @results.each do |x| %>
+  <a href="/private/<%= x.name %>" class="entry_container">
+    <img src="<%= x.icon_url %>"></img>
+    <h2 class="entry_title"><%= x.name %></h2>
+  </a>
+  <br/>
+<% end %>
+
+<div class="center">
+  <%= will_paginate @results %>
+  <br/>
+  <%= link_to("Logged in as: #{@user.email}", edit_user_registration_path, :method => :get) %> |
+  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %> | 
+  <%= link_to("Public Page", root_path, :method => :get) %>
+</div>

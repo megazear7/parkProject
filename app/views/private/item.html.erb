@@ -1,0 +1,21 @@
+<div class="center"><%= link_to("Back To Colombus Listings Page", private_path, :method => :get) %></div>
+<br/>
+<br/>
+<% if @title %>
+  <h1 class="center"><%= @title %></h1>
+<% else %>
+  <h1 class="center">No Title Found</h1>
+<% end %>
+
+<% if @paragraph %>
+  <p class="center"><%= @paragraph %></p>
+<% else %>
+  <p class="center">No Paragraph Found</p>
+<% end %>
+
+<div class="center">
+  <br/>
+  <%= link_to("Logged in as: #{@user.email}", edit_user_registration_path, :method => :get) %> |
+  <%= link_to("Welcome Page", root_path, :method => :get) %> | 
+  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+</div>

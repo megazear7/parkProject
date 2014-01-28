@@ -1,0 +1,28 @@
+<h1 class="center">Welcome to Colombus Info!!!</h1>
+<br/>
+<p class="center">
+Welcome, this website retreives the top Google places search results for colombus ohio, lists them, and gives you Google's, "I'm feeling lucky" search result information.
+</p>
+
+<div class="center">
+  <h2>
+    <%= link_to("View Colombus Listing", private_path, :method => :get) %>
+  </h2>
+</div>
+
+<% if user_signed_in? %>
+  <div class="center">
+    <br/>
+    <%= link_to("Logged in as: #{@user.email}", edit_user_registration_path, :method => :get) %> |
+    <%= link_to("Welcome Page", root_path, :method => :get) %> | 
+    <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+  </div>
+<% else %>
+  <div class="center">
+    <%= link_to("Log in", new_user_session_path, :method => :get) %>
+    or
+    <%= link_to("Sign up", new_user_registration_path, :method => :get) %>
+  </div>
+<% end %>
+
+
