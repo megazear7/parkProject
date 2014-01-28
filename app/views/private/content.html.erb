@@ -1,13 +1,15 @@
 <h1>This page is private</h1>
 <br/>
 
-<% @test["results"].each do |x| %>
-  <div class="entry_container">
-	<img src="<%= x["icon"] %>"></img>
-	<h2 class="entry_title"><%= x["name"]  %></h2>
-  </div>
+<% @results.each do |x| %>
+  <a href="/private/<%= x.name %>" class="entry_container">
+	<img src="<%= x.icon_url %>"></img>
+	<h2 class="entry_title"><%= x.name %></h2>
+  </a>
   <br/>
 <% end %>
+
+<%= will_paginate @results %>
 
 <p>Logged in as: <%= @user.email %></p>
 <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>

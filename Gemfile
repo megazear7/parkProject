@@ -47,11 +47,11 @@ end
 # Use Devise as a login system
 gem 'devise'
 
-# Use Active Resource to control Api interaction
-gem "activeresource", "~> 4.0.0"
-
-gem "google-api-client", '~> 0.4.3', :require => "google/api_client"
-
+# Use httparty to interact with google places api
 gem "httparty"
 
+# Use json to access google places data
 gem "json"
+
+# Use will paginate to paginate data
+gem 'will_paginate', '~> 3.0.5'
