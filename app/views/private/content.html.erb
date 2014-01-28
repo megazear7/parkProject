@@ -1,4 +1,4 @@
-<h1>This page is private</h1>
+<h1 class="center">Colombus Listings</h1>
 <br/>
 
 <% @results.each do |x| %>
@@ -9,9 +9,10 @@
   <br/>
 <% end %>
 
-<%= will_paginate @results %>
-
-<p>Logged in as: <%= @user.email %></p>
-<%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-<br/>
-<%= link_to("Public Page", root_path, :method => :get) %>
+<div class="center">
+	<%= will_paginate @results %>
+	<br/>
+	<%= link_to("Logged in as: #{@user.email}", edit_user_registration_path, :method => :get) %> |
+	<%= link_to("Logout", destroy_user_session_path, :method => :delete) %> | 
+	<%= link_to("Public Page", root_path, :method => :get) %>
+</div>

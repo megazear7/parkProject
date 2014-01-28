@@ -14,4 +14,22 @@ class PrivateController < ApplicationController
 	@results = @list.paginate(page: params[:page], per_page: 5)
   end
 
+  def item
+    @user = current_user
+    search = params[:id].gsub(/ /, '+')
+    @content = HTTParty.get("http://www.google.com/search?h1=en&q=#{search}&btnI=I")	
+
+    @title = @content[/<h>.*?<\/h/]
+	if @title 
+	  @title.gsub!(/<(.*?)>/, '')
+	end
+
+
+    @paragraph = @content[/<p>.*?<\/p>/]
+	if @paragraph
+	  @paragraph.gsub!(/<(.*?)>/, '')
+	end
+
+  end
+
 end

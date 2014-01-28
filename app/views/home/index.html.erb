@@ -1,18 +1,28 @@
-<h1>This page is public</h1>
+<h1 class="center">Welcome to Colombus Info!!!</h1>
 <br/>
+<p class="center">
+Welcome, this website retreives the top google places search results from colombus ohio, lists them for you, and gives you googles, "I'm feeling lucky" search result information as well for each listing.
+</p>
 
-<%= link_to("View Private Page", private_path, :method => :get) %>
-or
-<br/>
-<br/>
+<div class="center">
+	<h2>
+		<%= link_to("View Colombus Listing", private_path, :method => :get) %>
+	</h2>
+</div>
 
 <% if user_signed_in? %>
-  <p>Logged in as: <%= @user.email %></p>
-  <%= link_to("Log out", destroy_user_session_path, :method => :delete) %>
+	<div class="center">
+		<br/>
+		<%= link_to("Logged in as: #{@user.email}", edit_user_registration_path, :method => :get) %> |
+		<%= link_to("Welcome Page", root_path, :method => :get) %> | 
+		<%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+	</div>
 <% else %>
-  <%= link_to("Log in", new_user_session_path, :method => :get) %>
-  or
-  <br/>
-  <br/>
-  <%= link_to("Sign up", new_user_registration_path, :method => :get) %>
+	<div class="center">
+	  <%= link_to("Log in", new_user_session_path, :method => :get) %>
+	  or
+	  <%= link_to("Sign up", new_user_registration_path, :method => :get) %>
+	</div>
 <% end %>
+
+
